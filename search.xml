@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hello-world]]></title>
-    <url>%2F2018%2F11%2F25%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[NOIP2018总结]]></title>
+    <url>%2F2018%2F11%2F25%2FNOIP2018%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[考试回顾Day1T1感觉和之前某道题比较像，但是最初还误以为是单调栈(矩形覆盖)，过了10min才反应过来是一道和之前某题极像的贪心(积木大赛)，大约总用时30min。T2本题首先用时20min发现并证明了删数的正确性，然后紧接着就想到了可以用一个背包DP解决，总体较为顺利，用时50min。T3最开始的30min毫无思路可言，然后就开始思考部分分，当想到所有边均连向根节点的情况可以贪心处理时，发现本题的全部数据其实可以贪心解决。这时候就开始打代码，在距离考试结束大约1h时完成代码，但是始终无法调试通过大数据。后来思考发现贪心有一个漏洞——无法保证向上传给父亲节点的最优性，然而对于此问题想不出一个非常好的解决方案，就在距结束半小时的时候打了一个认为正确但时间复杂度不优的补丁(最坏卡至O(N^2*log2N))，通过了大样例，同时加了一个特殊判断(针对特殊数据部分分不使用补丁)，略有遗憾的是特判条件明显出了点错，可能导致少拿0~20分。 Day2T1想到思路比较快，但是思路中出现了一个bug，导致程序出现一个小问题，调试耗费大量时间，总用时75min。T2开始考虑使用状压DP，大概想出一个粗略思路后准备先打暴力得到一定分并且尝试确认状压的正确性与找规律，打完暴力后发现想不出状压的思路，然后就找到了一些规律，总得分65，用时75min。T3最后仅剩下1h，刚开始就打算打一个暴力，然后较为快速地读完题与样例、数据范围，立刻就发现有一部分的部分分好像可以打 (①：链的数据，期望得分48，难度相对较大，且要分为两部分分开打，每部分的分值各占一半，但还是可以打；② ： n、m&lt;=10的数据，期望得分16，实现容易，思路简单)。在这个时候，头脑发热，自己认为链的数据好打，便立刻开始行动，进行敲代码，开打一段时间之后才发现算法实现有较大困难，我还清楚记得距离考试结束仅剩30min时，仍然连第一部分的数据的代码本身都尚未敲完，这时有点想要去打16分的sb暴力，但终究还是有点贪心，继续打链的数据。所以，导致到了考试马上要结束之时，仍然无法调试出针对第一步扥的数据的代码，完全无法通过自己手造的n=5的小数据，感觉中间细节极其多。由于一开始的冲动，导致成功错过了树形DP的部分分。 考试反思与总结考试实例1) 在Day1T3的时候，因为贪心策略中有一个细节没有考虑到，导致调试耗费花费大约20min才发现问题所在(无法保证上传的值的最大性)，然后又花费大约50min调整代码，并且始终无法想出正确且时间复杂度正确的修改方案，所以最终采用了正确但时间复杂度不优的修改方案+特判处理暴力分的方式解决本题目，并且最后在特判处出现了一定问题，导致得分可能减少0-20分，最终期望得分60+。2) 在Day2T3的时候，因为时间紧张，仅剩1h，读题不够仔细，导致心态出现一些问题，考试节奏有问题，错误地估计了链的数据的实现复杂度，然后错过了树形DP的部分分，然后又同时以为在链的数据中当a、b相邻时答案必为-1，故导致最后期望得分0分。 考试总结1、解题速度与解题的一次正确率非常重要。2、一定不能因为想到了一些思路就急于实现代码，一定要将思路想得非常完整时再开始写代码。3、不论时间剩余多少，审题与确认思路都是根本，想到一些思路后也要尝试思考更好的思路。4、增强对于题目的熟练度 调整策略1、大量增加刷题量2、增强考试策略经验的积累总结3、增强对于知识掌握的系统性、准确性4、锻炼自己的心态与状态]]></content>
       <categories>
         <category>博客</category>
       </categories>
@@ -12,20 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[new]]></title>
-    <url>%2F2018%2F11%2F25%2Ftle%2F</url>
-    <content type="text"><![CDATA[noip 2018]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hexo文章简单加密访问]]></title>
-    <url>%2F2016%2F12%2F01%2Ftest%2F</url>
-    <content type="text"><![CDATA[buzhibujue ak ioi sbsbsbsb]]></content>
+    <title><![CDATA[standard]]></title>
+    <url>%2F2018%2F11%2F25%2Fstandard%2F</url>
+    <content type="text"></content>
       <categories>
         <category>博客</category>
       </categories>
